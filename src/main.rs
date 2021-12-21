@@ -1,19 +1,18 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 use serde_json::Result;
 use std::fs::File;
 use std::io::{BufReader, BufWriter};
 
-
 #[derive(Debug, Serialize, Deserialize)]
-struct Move{
+struct Move {
     direction: i32,
-    points: Vec<i32>
+    points: Vec<i32>,
 }
 
-fn main() -> Result<()>{
-    let a = Move{
+fn main() -> Result<()> {
+    let a = Move {
         direction: 1,
-        points: Vec::from([1,2,3])
+        points: Vec::from([1, 2, 3]),
     };
     println!("{:?}", a);
 
